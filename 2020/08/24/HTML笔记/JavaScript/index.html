@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang=en>
+<html>
 <head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="JavaScript for…in 和 for…of 的写法 for…in 循环的语法是这样的：  12345678910let peppaFamily &#x3D; [&amp;#x27;佩奇&amp;#x27;, &amp;#x27;乔治&amp;#x27;, &amp;#x27;猪妈妈&amp;#x27;,&amp;#x27;猪爸爸&amp;#x27;];for(let i in peppaFamily) &amp;#123;  console.log(peppaFami">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JavaScript for…in 和 for…of 的写法 for…in 循环的语法是这样的：  12345678910let peppaFamily &#x3D; [&amp;#x27;佩奇&amp;#x27;, &amp;#x27;乔治&amp;#x27;, &amp;#x27;猪妈妈&amp;#x27;,&amp;#x27;猪爸爸&amp;#x27;];for(let i in peppaFamily) &amp;#123;  console.log(peppaFami">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/index.html">
@@ -17,136 +18,67 @@
 <meta property="article:modified_time" content="2020-07-12T01:53:25.760Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-          
-        
-    
-    <!-- title -->
-    <title>Hexo</title>
-    <!-- styles -->
-    
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
 <link rel="stylesheet" href="/css/style.css">
 
-    <!-- persian styles -->
-    
-      
-<link rel="stylesheet" href="/css/rtl.css">
-
-    
-    <!-- rss -->
-    
-    
 <meta name="generator" content="Hexo 5.1.1"></head>
 
-<body class="max-width mx-auto px3 ltr">
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-HTML笔记/JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/" class="article-date">
+  <time datetime="2020-08-24T04:11:25.306Z" itemprop="datePublished">2020-08-24</time>
+</a>
     
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="/projects_url">Projects</a></li>
-        
-      </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/2020/08/24/HTML%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%AA%92%E4%BD%93/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        
-        
-        <li><a class="icon" href="/2020/08/24/HTML%E7%AC%94%E8%AE%B0/CSS3%E4%B8%AD%E7%9A%84%E5%8A%A8%E7%94%BB%E4%B8%8E%E5%8F%98%E5%BD%A2/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&text="><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&title="><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&is_video=false&description="><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&title="><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&title="><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&title="><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&title="><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&name=&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&t="><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.</span> <span class="toc-text">JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for%E2%80%A6in-%E5%92%8C-for%E2%80%A6of-%E7%9A%84%E5%86%99%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">for…in 和 for…of 的写法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%A6%82%E8%BF%B0"><span class="toc-number">1.2.</span> <span class="toc-text">函数概述</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E7%94%A8function%E5%91%BD%E4%BB%A4%E5%A3%B0%E6%98%8E"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 用function命令声明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8"><span class="toc-number">1.2.2.</span> <span class="toc-text">函数调用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E7%94%A8%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%A3%B0%E6%98%8E"><span class="toc-number">1.2.3.</span> <span class="toc-text">2. 用函数表达式声明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E7%9A%84%E6%8F%90%E5%8D%87"><span class="toc-number">1.2.4.</span> <span class="toc-text">函数声明的提升</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E9%87%8D%E5%A4%8D%E5%A3%B0%E6%98%8E"><span class="toc-number">1.2.5.</span> <span class="toc-text">函数的重复声明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.6.</span> <span class="toc-text">立即执行函数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0-%E8%AE%A1%E6%97%B6%E5%99%A8"><span class="toc-number">1.3.</span> <span class="toc-text">内置函数-计时器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BB%B6%E6%97%B6%E6%89%A7%E8%A1%8C-setTimeout"><span class="toc-number">1.3.1.</span> <span class="toc-text">延时执行 setTimeout()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%97%A0%E9%99%90%E8%B0%83%E7%94%A8-setInterval"><span class="toc-number">1.3.2.</span> <span class="toc-text">无限调用 setInterval()</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.4.</span> <span class="toc-text">对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.1.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E8%AF%BB%E5%8F%96"><span class="toc-number">1.4.2.</span> <span class="toc-text">属性的读取</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E6%9F%A5%E7%9C%8B"><span class="toc-number">1.4.3.</span> <span class="toc-text">属性的查看</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E5%88%A0%E9%99%A4%E5%92%8C%E5%A2%9E%E5%8A%A0"><span class="toc-number">1.4.4.</span> <span class="toc-text">属性的删除和增加</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="toc-number">1.4.5.</span> <span class="toc-text">对象的继承</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BOM"><span class="toc-number">1.5.</span> <span class="toc-text">BOM</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#window"><span class="toc-number">1.5.1.</span> <span class="toc-text">window</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DOM"><span class="toc-number">1.5.2.</span> <span class="toc-text">DOM</span></a></li></ol></li></ol></li></ol>
-    </div>
-  </span>
-</div>
-
+  </div>
+  <div class="article-inner">
     
-    <div class="content index py4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
     
-    <h1 class="posttitle" itemprop="name headline">
-        
-    </h1>
-
-
-
-    <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">Hexo</span>
-      </span>
+    <div class="article-entry" itemprop="articleBody">
       
-    <div class="postdate">
-      
-        <time datetime="2020-08-24T04:11:25.306Z" itemprop="datePublished">2020-08-24</time>
-        
-      
-    </div>
-
-
-      
-
-      
-
-    </div>
-  </header>
-  
-
-  <div class="content" itemprop="articleBody">
-    <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><hr>
+        <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><hr>
 <h4 id="for…in-和-for…of-的写法"><a href="#for…in-和-for…of-的写法" class="headerlink" title="for…in 和 for…of 的写法"></a>for…in 和 for…of 的写法</h4><ol>
 <li>for…in 循环的语法是这样的：</li>
 </ol>
@@ -260,138 +192,130 @@
 </blockquote>
 <p>DOM映射</p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/" data-id="cke851g3a0006wwvsejl9222u" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
-</article>
-
-
-
-        
-          <div id="footer-post-container">
-  <div id="footer-post">
-
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="/projects_url">Projects</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.</span> <span class="toc-text">JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for%E2%80%A6in-%E5%92%8C-for%E2%80%A6of-%E7%9A%84%E5%86%99%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">for…in 和 for…of 的写法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%A6%82%E8%BF%B0"><span class="toc-number">1.2.</span> <span class="toc-text">函数概述</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E7%94%A8function%E5%91%BD%E4%BB%A4%E5%A3%B0%E6%98%8E"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 用function命令声明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8"><span class="toc-number">1.2.2.</span> <span class="toc-text">函数调用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E7%94%A8%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%A3%B0%E6%98%8E"><span class="toc-number">1.2.3.</span> <span class="toc-text">2. 用函数表达式声明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E7%9A%84%E6%8F%90%E5%8D%87"><span class="toc-number">1.2.4.</span> <span class="toc-text">函数声明的提升</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E9%87%8D%E5%A4%8D%E5%A3%B0%E6%98%8E"><span class="toc-number">1.2.5.</span> <span class="toc-text">函数的重复声明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.6.</span> <span class="toc-text">立即执行函数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0-%E8%AE%A1%E6%97%B6%E5%99%A8"><span class="toc-number">1.3.</span> <span class="toc-text">内置函数-计时器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BB%B6%E6%97%B6%E6%89%A7%E8%A1%8C-setTimeout"><span class="toc-number">1.3.1.</span> <span class="toc-text">延时执行 setTimeout()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%97%A0%E9%99%90%E8%B0%83%E7%94%A8-setInterval"><span class="toc-number">1.3.2.</span> <span class="toc-text">无限调用 setInterval()</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.4.</span> <span class="toc-text">对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.1.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E8%AF%BB%E5%8F%96"><span class="toc-number">1.4.2.</span> <span class="toc-text">属性的读取</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E6%9F%A5%E7%9C%8B"><span class="toc-number">1.4.3.</span> <span class="toc-text">属性的查看</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E5%88%A0%E9%99%A4%E5%92%8C%E5%A2%9E%E5%8A%A0"><span class="toc-number">1.4.4.</span> <span class="toc-text">属性的删除和增加</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="toc-number">1.4.5.</span> <span class="toc-text">对象的继承</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BOM"><span class="toc-number">1.5.</span> <span class="toc-text">BOM</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#window"><span class="toc-number">1.5.1.</span> <span class="toc-text">window</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DOM"><span class="toc-number">1.5.2.</span> <span class="toc-text">DOM</span></a></li></ol></li></ol></li></ol>
-    </div>
-
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&text="><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&title="><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&is_video=false&description="><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&title="><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&title="><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&title="><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&title="><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&name=&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/&t="><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-
-    <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
-    </div>
-
-  </div>
-</div>
-
-        
-        <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy;
+  
     
-    
-    2016-2020
-    John Doe
-  </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="/projects_url">Projects</a></li>
+<nav id="article-nav">
+  
+    <a href="/2020/08/24/HTML%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%AA%92%E4%BD%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
-      </ul>
-    </nav>
-  </div>
-</footer>
-
-    </div>
-    <!-- styles -->
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-
-<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
-
-
-    <!-- jquery -->
-
-<script src="/lib/jquery/jquery.min.js"></script>
-
-
-<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
-
-<!-- clipboard -->
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/08/24/HTML%E7%AC%94%E8%AE%B0/CSS3%E4%B8%AD%E7%9A%84%E5%8A%A8%E7%94%BB%E4%B8%8E%E5%8F%98%E5%BD%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
   
-<script src="/lib/clipboard/clipboard.min.js"></script>
+</article>
 
-  <script type="text/javascript">
-  $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
-    btn += '<i class="far fa-clone"></i>';
-    btn += '</span>'; 
-    // mount it!
-    $(".highlight table").before(btn);
-    var clip = new ClipboardJS('.btn-copy', {
-      text: function(trigger) {
-        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
-      }
-    });
-    clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Copied!");
-      e.clearSelection();
-    })
-  })
-  </script>
+</section>
+        
+          <aside id="sidebar">
+  
+    
 
+  
+    
 
-<script src="/js/main.js"></script>
-
-<!-- search -->
-
-<!-- Google Analytics -->
-
-<!-- Baidu Analytics -->
-
-<!-- Disqus Comments -->
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li></ul>
+    </div>
+  </div>
 
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/24/%E4%BC%98%E8%AF%BE%E8%BE%BE/%E6%9C%AA%E5%91%BD%E5%90%8D/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/24/%E4%BC%98%E8%AF%BE%E8%BE%BE/%E5%88%86%E6%B2%BB%E6%80%9D%E6%83%B3/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/24/%E4%BC%98%E8%AF%BE%E8%BE%BE/%E4%BC%98%E8%AF%BE%E8%BE%BE%E7%AE%97%E6%B3%95day01/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/24/%E4%BC%98%E8%AF%BE%E8%BE%BE/Typora%E6%95%99%E7%A8%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E5%BE%88%E7%BE%8E/%E9%80%92%E5%BD%92/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
 </body>
 </html>
