@@ -20,28 +20,32 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":null,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="JavaScript for…in 和 for…of 的写法 for…in 循环的语法是这样的：  12345678910let peppaFamily &#x3D; [&amp;#x27;佩奇&amp;#x27;, &amp;#x27;乔治&amp;#x27;, &amp;#x27;猪妈妈&amp;#x27;,&amp;#x27;猪爸爸&amp;#x27;];for(let i in peppaFamily) &amp;#123;  console.log(peppaFami">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JavaScript for…in 和 for…of 的写法 for…in 循环的语法是这样的：  12345678910let peppaFamily &#x3D; [&amp;#x27;佩奇&amp;#x27;, &amp;#x27;乔治&amp;#x27;, &amp;#x27;猪妈妈&amp;#x27;,&amp;#x27;猪爸爸&amp;#x27;];for(let i in peppaFamily) &amp;#123;  console.log(peppaFami">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-08-24T04:11:25.306Z">
+<meta property="article:modified_time" content="2020-07-12T01:53:25.760Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Hexo</title>
+  <title> | Hexo</title>
   
 
 
@@ -139,119 +143,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%AA%92%E4%BD%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/24/HTML%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%AA%92%E4%BD%93/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-08-24 12:11:25" itemprop="dateCreated datePublished" datetime="2020-08-24T12:11:25+08:00">2020-08-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-06 17:13:06" itemprop="dateModified" datetime="2020-07-06T17:13:06+08:00">2020-07-06</time>
-              </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="多媒体"><a href="#多媒体" class="headerlink" title="多媒体"></a>多媒体</h3><hr>
-<h4 id="HTML5页面中的多媒体"><a href="#HTML5页面中的多媒体" class="headerlink" title="HTML5页面中的多媒体"></a>HTML5页面中的多媒体</h4><blockquote>
-<p>新增<code>&lt;video&gt;</code>与<code>&lt;audio&gt;</code>标签</p>
-<p>使用方法：（以<code>&lt;audio&gt;</code>标签为例）只要把音频的URL赋值给指定标签的src属性就可以了。</p>
-</blockquote>
-<p><code>&lt;video&gt;</code>与<code>&lt;audio&gt;</code>属性</p>
-<blockquote>
-<ul>
-<li><p>src为媒体数据URL</p>
-</li>
-<li><p>autoplay为指定数据页面加载后是否自动播放</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">&quot;sample.mov&quot;</span> <span class="attr">autoplay</span>=<span class="string">&quot;autoplay&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>perload为指定视频或音频数据是否预加载</p>
-<ul>
-<li><p>none：不进行预加载</p>
-</li>
-<li><p>metadata：只预加载媒体的元数据</p>
-</li>
-<li><p>auto：预加载全部视频或音频</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><video src="sample.mov" perload="auto"></video></p>
-<ul>
-<li>poster(<code>&lt;video&gt;</code>独有)：视频不可用时，指定代替图片在video的位置。</li>
-<li>loop：媒体数据是否循环播放</li>
-<li>control：指定是否为媒体数据添加播放的控制条</li>
-<li>width，height：设置视频宽高</li>
-<li>muted：设置媒体的静音状态（true or false）</li>
-</ul>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">&quot;http://mingri/demo/test.mp3&quot;</span>&gt;</span>您的浏览器不支持audio标签<span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>通过这种方法，可以把指定的音频数据直接嵌入网页上，“您的浏览器不支持audio标签”为替代文字。<br>可以通过<code>&lt;source&gt;</code>来为同一个媒体数据指定多个播放格式和编码方式。</p>
-<p><code>&lt;source&gt;</code>标签有以下几种属性：</p>
-<ul>
-<li>src属性是指播放媒体的URL地址</li>
-<li>type属性表示媒体类型，其属性值为播放文件的MIME类型，<ul>
-<li>该属性中的codecs参数表示媒体的编码格式</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;demo/sample.ogv&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/ogg; codecs=&#x27;theora, vorbis&#x27;&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;demo/sample.mov&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/quicktime&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -267,10 +162,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/24/HTML%E7%AC%94%E8%AE%B0/JavaScript/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -300,7 +194,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><hr>
+        <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><hr>
 <h4 id="for…in-和-for…of-的写法"><a href="#for…in-和-for…of-的写法" class="headerlink" title="for…in 和 for…of 的写法"></a>for…in 和 for…of 的写法</h4><ol>
 <li>for…in 循环的语法是这样的：</li>
 </ol>
@@ -414,390 +308,33 @@
 </blockquote>
 <p>DOM映射</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/24/HTML%E7%AC%94%E8%AE%B0/CSS3%E4%B8%AD%E7%9A%84%E5%8A%A8%E7%94%BB%E4%B8%8E%E5%8F%98%E5%BD%A2/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/24/HTML%E7%AC%94%E8%AE%B0/CSS3%E4%B8%AD%E7%9A%84%E5%8A%A8%E7%94%BB%E4%B8%8E%E5%8F%98%E5%BD%A2/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-08-24 12:11:25" itemprop="dateCreated datePublished" datetime="2020-08-24T12:11:25+08:00">2020-08-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-13 10:15:15" itemprop="dateModified" datetime="2020-06-13T10:15:15+08:00">2020-06-13</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="CSS3中的动画与变形"><a href="#CSS3中的动画与变形" class="headerlink" title="CSS3中的动画与变形"></a>CSS3中的动画与变形</h3><hr>
-<h4 id="2D变换-transform"><a href="#2D变换-transform" class="headerlink" title="2D变换-transform"></a>2D变换-transform</h4><ul>
-<li>transform属性的属性值</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>值/函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>none</td>
-<td>表示无变换</td>
-</tr>
-<tr>
-<td>translate(length,length)</td>
-<td>实现2D平移。第一个参数对应X轴，第二个参数对应Y轴，如果第二个参数未提供，默认为0</td>
-</tr>
-<tr>
-<td>translateX(length)</td>
-<td>实现在X轴上平移，参数length表示移动距离</td>
-</tr>
-<tr>
-<td>translateY(length)</td>
-<td>实现在Y轴上平移，参数length表示移动距离</td>
-</tr>
-<tr>
-<td>scaleX(number)</td>
-<td>实现在X轴上进行缩放</td>
-</tr>
-<tr>
-<td>scaleY(number)</td>
-<td>实现在Y轴上进行缩放</td>
-</tr>
-<tr>
-<td>scale(number,number)</td>
-<td>实现2D缩放，第一个参数对应X轴，第二个参数对应Y轴，如果第二个参数未提供，默认取第一个参数值</td>
-</tr>
-<tr>
-<td>skew(angle,angle)</td>
-<td>实现2D倾斜，第一个参数对应X轴，第二个参数对应Y轴，如果第二个参数未提供，默认为0</td>
-</tr>
-<tr>
-<td>skewX(angle)</td>
-<td>实现在X轴上进行倾斜</td>
-</tr>
-<tr>
-<td>skewY(angle)</td>
-<td>实现在Y轴上进行倾斜</td>
-</tr>
-<tr>
-<td>rotate(angle)</td>
-<td>进行2D旋转，参数angle用于指定旋转角度</td>
-</tr>
-<tr>
-<td>matrix(number,number,number，number,number,number,)</td>
-<td>基于矩阵变换的函数，它以一个包含6个值的变换矩阵的形式指定一个2D变换</td>
-</tr>
-</tbody></table>
-<ul>
-<li>变换中心点-transform-origin属性<table>
-<thead>
-<tr>
-<th align="left">属性值</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><percentage></td>
-<td align="left">用百分比指定坐标值。可以为负值</td>
-</tr>
-<tr>
-<td align="left"><length></td>
-<td align="left">用长度指定坐标值。可以为负值</td>
-</tr>
-<tr>
-<td align="left">left</td>
-<td align="left">指定原点横坐标居左</td>
-</tr>
-<tr>
-<td align="left">center</td>
-<td align="left">指定原点横坐标居中</td>
-</tr>
-<tr>
-<td align="left">right</td>
-<td align="left">指定原点横坐标居右</td>
-</tr>
-<tr>
-<td align="left">top</td>
-<td align="left">指定原点纵坐标居顶</td>
-</tr>
-<tr>
-<td align="left">center</td>
-<td align="left">指定原点纵坐标居中</td>
-</tr>
-<tr>
-<td align="left">bottom</td>
-<td align="left">指定原点纵坐标居底</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<hr>
-<h4 id="过渡效果-transition"><a href="#过渡效果-transition" class="headerlink" title="过渡效果-transition"></a>过渡效果-transition</h4><ul>
-<li><p>transition-property（指定参与过渡的属性）</p>
-<ul>
-<li>all：默认值，表示所有可以进行过渡的css属性</li>
-<li>none：不指定过渡的css属性</li>
-<li><property>：指定要进行过渡的css属性。可以同时指定多个属性值，以逗号“，”进行分隔</li>
-</ul>
-</li>
-<li><p>transform-duration（指定过渡的持续时间）</p>
-<ul>
-<li>默认值为0存在多值以逗号“，”进行分隔</li>
-</ul>
-</li>
-<li><p>transform-delay（指定过渡延迟时间）</p>
-<ul>
-<li>默认值为0存在多值以逗号“，”进行分隔</li>
-</ul>
-</li>
-<li><p>transform-timing-function（指定过渡的动画类型）</p>
-<table>
-<thead>
-<tr>
-<th align="left">属性值</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">linear</td>
-<td align="left">线性过渡，也就是匀速过渡</td>
-</tr>
-<tr>
-<td align="left">ease</td>
-<td align="left">平滑过渡，过渡的速度会逐渐慢下来。</td>
-</tr>
-<tr>
-<td align="left">ease-in</td>
-<td align="left">由慢到快，逐渐加速</td>
-</tr>
-<tr>
-<td align="left">ease-out</td>
-<td align="left">由快到慢，逐渐减速</td>
-</tr>
-<tr>
-<td align="left">ease-in-out</td>
-<td align="left">由慢到快再到慢</td>
-</tr>
-<tr>
-<td align="left">cubic-bezier(x1,x2,y1,y2)</td>
-<td align="left">特定的贝塞尔曲线类型</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<hr>
-<h4 id="动画-Animation"><a href="#动画-Animation" class="headerlink" title="动画-Animation"></a>动画-Animation</h4><ul>
-<li>关键帧<ul>
-<li>关键字from-to 定位关键帧的位置</li>
-<li>指定百分比0%，50%…<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@keyframes name&#123;</span><br><span class="line">	’<span class="tag">&lt;<span class="name">keyframes-blocks</span>&gt;</span>‘</span><br><span class="line">     from&#123;</span><br><span class="line">	&#125;</span><br><span class="line">     to&#123;</span><br><span class="line">	&#125;</span><br><span class="line">     0%&#123;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>动画属性<ul>
-<li>animation：复合属性，指定动画特效</li>
-<li>animation-name：指定动画名称</li>
-<li>animation-duration：指定动画持续时间</li>
-<li>animation-timing-function：指定动画过渡类型</li>
-<li>animation-delay：指定动画延迟时间</li>
-<li>animation-iteration-count：指定动画循环次数</li>
-<li>animation-direction：指定动画是否反向运动</li>
-<li>animation-play-state：指定动画的状态</li>
-<li>animation-fill-mode：指定动画开始时的状态</li>
-</ul>
-</li>
-</ul>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/24/HTML%E7%AC%94%E8%AE%B0/CSS3%E4%B8%AD%E7%9A%84%E5%8A%A8%E7%94%BB%E4%B8%8E%E5%8F%98%E5%BD%A2/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/24/HTML%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%AA%92%E4%BD%93/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/24/newpapername/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/24/newpapername/" class="post-title-link" itemprop="url">newpapername</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-08-24 11:43:06 / Modified: 11:43:57" itemprop="dateCreated datePublished" datetime="2020-08-24T11:43:06+08:00">2020-08-24</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="hello-git"><a href="#hello-git" class="headerlink" title="hello git"></a>hello git</h3>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/24/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/24/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-08-24 11:29:30" itemprop="dateCreated datePublished" datetime="2020-08-24T11:29:30+08:00">2020-08-24</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -850,6 +387,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.</span> <span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#for%E2%80%A6in-%E5%92%8C-for%E2%80%A6of-%E7%9A%84%E5%86%99%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">for…in 和 for…of 的写法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%A6%82%E8%BF%B0"><span class="nav-number">1.2.</span> <span class="nav-text">函数概述</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E7%94%A8function%E5%91%BD%E4%BB%A4%E5%A3%B0%E6%98%8E"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 用function命令声明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8"><span class="nav-number">1.2.2.</span> <span class="nav-text">函数调用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E7%94%A8%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%A3%B0%E6%98%8E"><span class="nav-number">1.2.3.</span> <span class="nav-text">2. 用函数表达式声明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E7%9A%84%E6%8F%90%E5%8D%87"><span class="nav-number">1.2.4.</span> <span class="nav-text">函数声明的提升</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E9%87%8D%E5%A4%8D%E5%A3%B0%E6%98%8E"><span class="nav-number">1.2.5.</span> <span class="nav-text">函数的重复声明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.6.</span> <span class="nav-text">立即执行函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0-%E8%AE%A1%E6%97%B6%E5%99%A8"><span class="nav-number">1.3.</span> <span class="nav-text">内置函数-计时器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BB%B6%E6%97%B6%E6%89%A7%E8%A1%8C-setTimeout"><span class="nav-number">1.3.1.</span> <span class="nav-text">延时执行 setTimeout()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A0%E9%99%90%E8%B0%83%E7%94%A8-setInterval"><span class="nav-number">1.3.2.</span> <span class="nav-text">无限调用 setInterval()</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.4.</span> <span class="nav-text">对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">1.4.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E8%AF%BB%E5%8F%96"><span class="nav-number">1.4.2.</span> <span class="nav-text">属性的读取</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E6%9F%A5%E7%9C%8B"><span class="nav-number">1.4.3.</span> <span class="nav-text">属性的查看</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E5%88%A0%E9%99%A4%E5%92%8C%E5%A2%9E%E5%8A%A0"><span class="nav-number">1.4.4.</span> <span class="nav-text">属性的删除和增加</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="nav-number">1.4.5.</span> <span class="nav-text">对象的继承</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BOM"><span class="nav-number">1.5.</span> <span class="nav-text">BOM</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#window"><span class="nav-number">1.5.1.</span> <span class="nav-text">window</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DOM"><span class="nav-number">1.5.2.</span> <span class="nav-text">DOM</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
